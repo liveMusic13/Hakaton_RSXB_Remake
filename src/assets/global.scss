@@ -1,0 +1,11 @@
+@import './nullstyle';
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+
+body {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: $fz-s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

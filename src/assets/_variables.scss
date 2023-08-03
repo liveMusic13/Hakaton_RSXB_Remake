@@ -1,0 +1,22 @@
+$button_default_color: #89e159;
+$button_no-active_color: #91b87b;
+$button_hover_color: #202e2a;
+$button_active_color: linear-gradient(139deg, #89e159 0%, #b9f598 100%);
+$hover_red: #f68561;
+$gradient_1: var(linear-gradient(342deg, #1e4e4e 0%, #1f2431 100%), #1f2431);
+$gradient_2: var(
+	linear-gradient(341deg, rgba(30, 78, 78, 0.6) 0%, rgba(31, 36, 49, 0.6) 100%),
+	#1f2431
+);
+$text_1: #dbe2f9;
+$text_2: #bfc6dc;
+$text_3: #8990a5;
+$primary_1: #141b25;
+$primary_2: #1f2431;
+$fz: 64px;
+$fz-i: 36px;
+$fz-m: 26px;
+$fz-s: 20px;
+$bubble: rgba(219, 226, 249, 0.8);
+$blur: blur(5px);
+$bot-none: rgba(183, 183, 183, 0.8);
