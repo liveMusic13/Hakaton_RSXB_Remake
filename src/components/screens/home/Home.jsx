@@ -24,7 +24,14 @@ const Home = () => {
 			<h1>Ферма будущего</h1>
 			<h2>визуальная новелла</h2>
 			<ul>
-				<li onClick={() => navigate('/intro')}>Начать игру</li>
+				<li
+					onClick={() => {
+						setSaveStep('start');
+						navigate('/intro');
+					}}
+				>
+					Начать игру
+				</li>
 				{saveStep !== 'start' && saveStep ? (
 					<li onClick={() => navigate('/narrativeWindow')}>Продолжить</li>
 				) : (
