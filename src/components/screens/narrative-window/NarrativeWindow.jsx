@@ -89,8 +89,6 @@ const NarrativeWindow = () => {
 			? 'url(./scena_4-vyb3.png)'
 			: '';
 
-	console.log(saveStep);
-
 	const choiceАndСonsequences =
 		saveStep === 'start' ? (
 			<NarrativeContent>{data.scene_one.intro}</NarrativeContent>
@@ -215,14 +213,16 @@ const NarrativeWindow = () => {
 			className={styles.wrapper}
 			style={{ backgroundImage: roadMapForBackground }}
 		>
-			<Button veiwHelp={veiwHelp} setVeiwHelp={setVeiwHelp} help={'help'}>
-				<img src='./help-no-active.svg' alt='help' />
-			</Button>
-			<Button exit={'exit'}>
-				<img src='./exit-no-active.svg' alt='exit' />
-			</Button>
-			{veiwHelp ? <Help /> : <></>}
-			{choiceАndСonsequences}
+			<div className={styles.animation}>
+				<Button veiwHelp={veiwHelp} setVeiwHelp={setVeiwHelp} help={'help'}>
+					<img src='./help-no-active.svg' alt='help' />
+				</Button>
+				<Button exit={'exit'}>
+					<img src='./exit-no-active.svg' alt='exit' />
+				</Button>
+				{veiwHelp ? <Help /> : <></>}
+				{choiceАndСonsequences}
+			</div>
 		</div>
 	);
 };
