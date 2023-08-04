@@ -213,16 +213,14 @@ const NarrativeWindow = () => {
 			className={styles.wrapper}
 			style={{ backgroundImage: roadMapForBackground }}
 		>
-			<div className={styles.animation}>
-				<Button veiwHelp={veiwHelp} setVeiwHelp={setVeiwHelp} help={'help'}>
-					<img src='./help-no-active.svg' alt='help' />
-				</Button>
-				<Button exit={'exit'}>
-					<img src='./exit-no-active.svg' alt='exit' />
-				</Button>
-				{veiwHelp ? <Help /> : <></>}
-				{choiceАndСonsequences}
-			</div>
+			<Button veiwHelp={veiwHelp} setVeiwHelp={setVeiwHelp} help={'help'}>
+				<img src='./help-no-active.svg' alt='help' />
+			</Button>
+			<Button exit={'exit'}>
+				<img src='./exit-no-active.svg' alt='exit' />
+			</Button>
+			{veiwHelp ? <Help /> : <></>}
+			{choiceАndСonsequences}
 		</div>
 	);
 };
