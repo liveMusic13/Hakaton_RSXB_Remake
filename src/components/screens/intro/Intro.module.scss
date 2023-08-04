@@ -1,0 +1,75 @@
+@import '../../../assets/nullstyle';
+@import '../../../assets/variables';
+
+.wrapper {
+	width: 51.2em;
+	height: 38.4em;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1.8em;
+
+	& .block__content {
+		position: absolute;
+		top: 6em;
+		right: 3.2em;
+		background-color: $text_1;
+		width: 28.3em;
+		height: 10.8em;
+		padding: 1.6em 1.3em 2.85em 1.3em;
+		border-radius: 10px;
+
+		& > h3 {
+			margin-bottom: 1em;
+		}
+	}
+
+	& .test {
+		position: absolute;
+		top: 16.3em;
+		left: 19.7em;
+		width: 0;
+		height: 0;
+		border-top: 40px solid $text_1;
+		border-right: 40px solid transparent;
+	}
+
+	& .block__content1 {
+		position: absolute;
+		top: 9em;
+		left: 3.2em;
+		background-color: $text_1;
+		width: 28.3em;
+		height: 7.8em;
+		padding: 1.6em 1.3em 2.85em 1.3em;
+		border-radius: 10px;
+	}
+
+	& .test1 {
+		position: absolute;
+		top: 16.3em;
+		left: 29.5em;
+		width: 0;
+		height: 0;
+		border-top: 40px solid $text_1;
+		border-left: 40px solid transparent;
+	}
+
+	& .block__content2 {
+		position: absolute;
+		top: 9em;
+		right: 3.2em;
+		background-color: $text_1;
+		width: 28.3em;
+		height: 7.8em;
+		padding: 1.6em 1.3em 2.85em 1.3em;
+		border-radius: 10px;
+	}
+
+	& .title_input {
+		color: $text_1;
+		font-size: $fz-i;
+	}
+}

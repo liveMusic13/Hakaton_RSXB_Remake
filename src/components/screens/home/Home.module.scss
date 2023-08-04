@@ -1,0 +1,54 @@
+@import '../../../assets/nullstyle';
+@import '../../../assets/variables';
+
+.wrapper {
+	font-weight: 500;
+	color: $text_1;
+	background-image: url('./glav-none.png');
+	width: 51.2em;
+	height: 38.4em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+
+	& > h1 {
+		font-size: $fz;
+		margin-bottom: 0.25em;
+		text-shadow: black 0px 3px 5px;
+	}
+
+	& > h2 {
+		font-size: $fz-m;
+		text-shadow: black 0px 3px 5px;
+	}
+
+	& ul {
+		margin-top: 2.75em;
+
+		& li {
+			color: $primary_1;
+			margin-bottom: 1em;
+			background-color: $button_default_color;
+			width: 10.4em;
+			height: 3em;
+			text-align: center;
+			padding-top: 1em;
+			border-radius: 12px;
+
+			&:hover {
+				cursor: pointer;
+				background: $button_hover_color;
+				border: 3px solid $button_default_color;
+				color: $text_2;
+				padding-top: 0.85em;
+			}
+
+			&:active {
+				background: $button_active_color;
+				color: $primary_1;
+			}
+		}
+	}
+}

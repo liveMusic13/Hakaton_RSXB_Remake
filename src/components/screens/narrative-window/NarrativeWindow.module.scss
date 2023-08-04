@@ -1,0 +1,11 @@
+@import '../../../assets/nullstyle';
+@import '../../../assets/variables';
+
+.wrapper {
+	position: relative;
+	width: 51.2em;
+	height: 38.4em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
