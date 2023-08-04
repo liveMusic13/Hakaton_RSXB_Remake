@@ -70,11 +70,17 @@ const NarrativeContent = ({ children }) => {
 			? 'scene_five_intro'
 			: null;
 
+	const saveToLocalStorage = () => {
+		const serializedSaveStep = JSON.stringify(saveStep);
+		localStorage.setItem('saveStep', serializedSaveStep);
+	};
+
 	return (
 		<div
 			className={styles.wrapper}
 			onClick={() => {
 				setSaveStep(goNarrative);
+				saveToLocalStorage();
 			}}
 		>
 			<p>{children}</p>
