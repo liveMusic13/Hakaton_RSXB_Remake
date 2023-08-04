@@ -17,13 +17,18 @@ const Button = ({
 	const addName = () => {
 		let name = '';
 
+		const saveToLocalStorage = () => {
+			const serializedSaveName = JSON.stringify(name);
+			localStorage.setItem('name', serializedSaveName);
+		};
+
 		if (nameInput === '') {
 			name = dafoultNameInput;
 		} else {
 			name = nameInput;
 		}
 		navigate('/narrativeWindow');
-		console.log(name);
+		saveToLocalStorage(name);
 		return name;
 	};
 
