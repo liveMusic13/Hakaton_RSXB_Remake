@@ -5,6 +5,11 @@ import styles from './Choise.module.scss';
 const Choise = ({ one, two, three }) => {
 	let { saveStep, setSaveStep } = useContext(saveStepContext);
 
+	const saveToLocalStorage = () => {
+		const serializedSaveStep = JSON.stringify(saveStep);
+		localStorage.setItem('saveStep', serializedSaveStep);
+	};
+
 	const goNarrativeChoise = variable => {
 		if (saveStep === 'scene_one_options') {
 			setSaveStep(`scene_one_${variable}`);
@@ -25,6 +30,7 @@ const Choise = ({ one, two, three }) => {
 				<li
 					onClick={() => {
 						goNarrativeChoise('var-one');
+						saveToLocalStorage();
 					}}
 				>
 					{one}
@@ -32,6 +38,7 @@ const Choise = ({ one, two, three }) => {
 				<li
 					onClick={() => {
 						goNarrativeChoise('var-two');
+						saveToLocalStorage();
 					}}
 				>
 					{two}
@@ -39,6 +46,7 @@ const Choise = ({ one, two, three }) => {
 				<li
 					onClick={() => {
 						goNarrativeChoise('var-three');
+						saveToLocalStorage();
 					}}
 				>
 					{three}
