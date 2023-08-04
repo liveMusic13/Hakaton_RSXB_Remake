@@ -11,6 +11,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 
 	& > h1 {
 		font-size: $fz;
@@ -42,6 +43,11 @@
 				border: 3px solid $button_default_color;
 				color: $text_2;
 				padding-top: 0.85em;
+			}
+
+			&:active {
+				background: $button_active_color;
+				color: $primary_1;
 			}
 		}
 	}

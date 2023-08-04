@@ -1,0 +1,52 @@
+@import '../../../assets/nullstyle';
+@import '../../../assets/variables';
+
+.wrapper {
+	width: 37.2em;
+	height: 24.7em;
+	background-color: $text_1;
+	padding: 3.25em;
+	z-index: 99989;
+	border-radius: 10px;
+	font-size: $fz-h;
+	overflow-y: auto;
+	position: absolute;
+	color: $primary_1;
+
+	&::-webkit-scrollbar {
+		width: 12px;
+		border-radius: 10px;
+	}
+	&::-webkit-scrollbar-track {
+		background-color: $text_1;
+		border: 1px solid $text_3;
+		border-radius: 10px;
+		margin-bottom: 32px;
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		background: $text_3;
+	}
+
+	& > h2 {
+		margin-top: 1.5em;
+		margin-bottom: 0.5em;
+	}
+
+	& > .block {
+		margin-top: 2.75em;
+		border: 1px solid $primary_1;
+		padding: 1em;
+		border-radius: 10px;
+
+		& > .p1 {
+			margin-bottom: 0.5em;
+		}
+	}
+
+	& > .intro {
+		& > p {
+			margin-bottom: 0.25em;
+		}
+	}
+}

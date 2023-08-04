@@ -1,8 +1,17 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { saveStepContext } from '../../Context';
 import styles from './Button.module.scss';
 
-const Button = ({ children, dafoultNameInput, nameInput }) => {
+const Button = ({
+	children,
+	dafoultNameInput,
+	nameInput,
+	help,
+	exit,
+	veiwHelp,
+	setVeiwHelp,
+}) => {
 	const navigate = useNavigate();
 
 	const addName = () => {
@@ -13,7 +22,7 @@ const Button = ({ children, dafoultNameInput, nameInput }) => {
 		} else {
 			name = nameInput;
 		}
-		navigate('/stepOne');
+		navigate('/narrativeWindow');
 		console.log(name);
 		return name;
 	};
@@ -31,12 +40,30 @@ const Button = ({ children, dafoultNameInput, nameInput }) => {
 		setStyleButtonActive(test());
 	}, [nameInput]);
 
+	let { saveStep, setSaveStep } = useContext(saveStepContext);
+
 	return (
-		<div>
-			<button className={styles[styleButtonActive]} onClick={() => addName()}>
-				{children}
-			</button>
-		</div>
+		<>
+			{help ? (
+				<button className={styles.help} onClick={() => setVeiwHelp(!veiwHelp)}>
+					{children}
+				</button>
+			) : exit ? (
+				<button
+					className={styles.exit}
+					onClick={() => {
+						setSaveStep('start');
+						navigate('/');
+					}}
+				>
+					{children}
+				</button>
+			) : (
+				<button className={styles[styleButtonActive]} onClick={() => addName()}>
+					{children}
+				</button>
+			)}
+		</>
 	);
 };
 
